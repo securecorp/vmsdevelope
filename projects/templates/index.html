@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<h1>projects</h1>
+{#{% if user.is_authenticated %}#}
+{#    <meta http-equiv="refresh" content="0; url=/accounts/login"> </meta>#}
+{#{% else %}#}
+   Hi {{ user.username }}!
+
+
+{% if projects %}
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <table class ="table thead-light">
+                <thread class="thead-light">
+                    <tr>
+                        <th>순번</th>
+                        <th>자산명</th>
+                        <th>취약점명</th>
+                        <th>취약한 URL</th>
+                        <th>취약한 변수</th>
+                        <th>비고</th>
+                    </tr>
+                </thread>
+                <tbody class="text-monospace">
+                {% for project in projects %}
+                <tr>
+                    <th>{{ project.id }}</th>
+                    <th>{{ project.target }}</th>
+                    <th>{{ project.vul_name }}</th>
+                    <th>{{ project.vul_url }}</th>
+                    <th>{{ project.vul_param }}</th>
+                    <th>**비고란**</th>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endif %}
+{#{% endif %}#}
+{% endblock %}
