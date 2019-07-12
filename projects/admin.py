@@ -32,7 +32,7 @@ class FulfillmentAdmin(admin.ModelAdmin):
     # summernote_fields = '__all__'
     search_fields = ['fulfill_vul']
     list_display = ['fulfill_vul','fulfill_vul_param','fulfill_vul_evi']
-    #inlines = [ProjectsInline]
+    # inlines = [ProjectsInline]
 
 class VulnerabilitiesAdmin(admin.ModelAdmin):
     search_fields = ['vul_name']
@@ -42,4 +42,4 @@ admin.site.register(Projectresult, ProjectResultAdmin)
 admin.site.register(Vulnerabilities, VulnerabilitiesAdmin)
 admin.site.register(Owners)
 admin.site.register(Assets)
-admin.site.register(Fulfillment, FulfillmentAdmin)
+admin.site.register(Fulfillment)#, FulfillmentAdmin)
