@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Projectresult, Vulnerabilities, Owners, Assets, Fulfillment
+from .models import Projectresult, Vulnerabilities, Owners, Assets, Fulfillment, ProjectManagement
 
 
 
@@ -43,3 +43,4 @@ admin.site.register(Vulnerabilities, VulnerabilitiesAdmin)
 admin.site.register(Owners)
 admin.site.register(Assets)
 admin.site.register(Fulfillment)#, FulfillmentAdmin)
+admin.site.register(ProjectManagement)
