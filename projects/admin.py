@@ -21,7 +21,7 @@ class ProjectResultAdmin(admin.ModelAdmin):
     sort = ['target']
     filtered = ['target']
     list_display = ['target','vul_name','vul_url','vul_param','vul_comment','vul_cause_comment']
-    inlines = [FulfillmentInline]
+    # inlines = [FulfillmentInline]
 
     # class Meta:
     #     model = Fulfillment
